@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Vetor
+        let produtos = [];
+
+        // Menu
+
+        let menu = "1° Cadastrar produto\n";
+        menu += "2° Listar todos os produtos\n";
+        menu += "3° Remover produto\n";
+        menu += "4° Finalizar\n";
+
+        // Opção
+
+        let opcao = 0;
+
+        // Laço de repetição
+
+        do{
+            // Obter a opção
+            opcao = parseInt(prompt(menu));
+
+            // Ações
+
+            switch(opcao){
+                case 1:
+                    produtos.push(prompt("Informe o produto que deseja cadastrar"));
+                    alert("Produto cadastrado com sucesso.");
+                    break;
+                case 2:
+                    let lista = "***** Produtos cadastrados *****\n\n"
+
+                    for (let indice=0; indice <produtos.length; indice++){
+                        lista += produtos[indice] + "\n";
+                    }
+
+                    alert(lista);
+                    break;
+                case 3:
+                    let indiceRemocao = -1;
+
+                    let nomeProdutoRemocao = prompt("Informe o nome do produto que deseja remover");
+
+                    for (let indice=0; indice < produtos.length; indice++) {
+                        if (nomeProdutoRemocao.toLowerCase() == produtos[indice].toLowerCase()) {
+                            indiceRemocao = indice;
+                        }
+                    }
+
+                    if(indiceRemocao != -1){
+                        produtos.splice(indiceRemocao, 1);
+                        alert("Produto removido com sucesso!");
+                    }else{
+                        alert("Não foi encontrado um produto com esse nome.")
+                    }
+                    break;
+                case 4:
+                    alert("Sistema finalizado");
+                    break;
+
+                default:
+                    alert("Opção inválida!");
+            }
+
+        }while(opcao != 4);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Função a ser chamada no forms
+
+        function mensagem(formulario) {
+            let nome = formulario[0].value;
+            let idade = parseInt(formulario[1].value);
+
+            if (nome == "") {
+                alert(`Informe um nome`);
+                formulario[0].focus();
+            } else if (isNaN(idade)) {
+                alert(`Informe sua idade`);
+                formulario[1].focus();
+            } else {
+                alert(`Boa noite ${nome} você tem ${idade} anos.`)
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- tipo submit está ligado ao action do form -->
+    <form action="#" onsubmit="mensagem(this)">
+        <input type="text" placeholder="Informe seu nome">
+        <br>
+        <input type="number" placeholder="Informe sua idade">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>

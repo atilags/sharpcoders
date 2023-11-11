@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box</title>
+
+    <style>
+        main {
+            width: 600px;
+            height: 400px;
+            background-color: brown;
+            /* Organiza da esquerda para a direita o que tiver dentro do obj */
+            /* Irá adequar as coisas dentro para caberem dentro de onde está flex */
+            display: flex;
+            /* Irá definir como estará organizado os elementos dentro */
+            /* flex-direction: column; */
+            /* Irá centralizar o que tiver dentro, entre outras coisas. Serve para organizar também. */
+            justify-content: center;
+            /* Alinhamento de itens internos */
+            align-items: center;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </main>
+
+</body>
+</html>

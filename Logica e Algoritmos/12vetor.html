@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // Vetor (array)
+        let nomes = ["Alice", "Bianca", "Caio", "Douglas"];
+
+        document.write(nomes);
+        
+        //Comando para cadastrar dados
+        
+        nomes.push("Ellen");
+        document.write("<br>" + nomes);
+
+        document.write("<br>" + nomes.length);
+
+        // Alterar dados do vetor
+
+        nomes[0] = "Ariane";
+
+        document.write("<br>" + nomes);
+
+        // Remover dados do vetor
+
+        nomes.splice(2, 1);
+
+        document.write("<br>" + nomes);
+
+        // Imprimir uma posição especifica
+        document.write("<br>" + nomes[3]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
