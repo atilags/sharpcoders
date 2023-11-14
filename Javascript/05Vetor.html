@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Vetores</title>
+
+    <script>
+        //Nomes
+        let nomes = ["Alice", "Bruno", "Carla", "Daniel", "Ellen"];
+
+        //Pessoas
+        let pessoas =[
+            {'nome': 'Alice', 'idade': 28},
+            {'nome': 'Bruno', 'idade': 34},
+            {'nome': 'Carla', 'idade': 40},
+            {'nome': 'Daniel', 'idade': 15},
+            {'nome': 'Ellen', 'idade': 17}
+        ]
+        pessoas.map(obj => document.write(obj.idade + "<hr>"));
+
+        //Map
+        nomes.map(obj => document.write(obj + "<hr>"));
+
+        // Filter
+        let nomeContendoA = nomes.filter(obj => {
+            return obj.toLocaleLowerCase().indexOf("a") != -1;
+            // return obj.toLocaleLowerCase().substring(0,1) == "a";
+        })
+
+        document.write(nomeContendoA + "<hr>");
+
+        //Foreach
+        nomes.forEach((nome, linha) => {
+            document.write(linha + " "+ nome + "<hr>");
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
