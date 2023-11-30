@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // PUT
+    fetch('http://localhost:3000/clientes/4', 
+    {
+        method: 'DELETE',
+        headers: {'Content-Type':'application/json'}
+    })
+    .then(request => console.log(request));
+</script>
+
+<body>
+
+</body>
+
+</html>

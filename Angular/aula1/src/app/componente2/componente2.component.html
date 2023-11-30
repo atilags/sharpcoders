@@ -1,0 +1,41 @@
+<!--
+    Property Bind - é a troca de informações entre esse arquivo e o arquivo ts.
+    () -> HTML chama uma função ou variavel no arquivo TS.
+    [] -> TS envia para o arquivo HTML
+    [()] -> Via de mão dupla. Ambos podem mandar e ambos podem receber.
+-->
+
+<!-- *ngIf é usado em estruturas HTML. caso seja em outros locais, é usado o [ngIf] -->
+<!-- IF -->
+
+<button (click)="visibilidadeTexto()">Clique aqui</button>
+<p *ngIf="exibirTexto">Aprendendo a trabalhar com o ngIf</p>
+
+<!-- TEMPLATE -->
+
+<ng-template [ngIf] = "exibirTexto">
+    <p>Texto inserido dentro do ng-template...</p>
+</ng-template>
+
+<!-- FOR -->
+
+<ul *ngFor="let pessoa of nomes; index as i">
+    <li>{{i}} - {{pessoa}}</li>
+</ul>
+
+<!-- SELECT -->
+
+<select [(ngModel)] = "linguagem">
+    <option value="">Selecione uma linguagem</option>
+    <option value="C#">C#</option>
+    <option value="Java">Java</option>
+    <option value="Python">Python</option>
+</select>
+
+<!-- SWITCH -->
+<ul [ngSwitch]="linguagem">
+    <li *ngSwitchCase="'C#'">C# é uma linguagem desenvolvida pela Microsoft</li>
+    <li *ngSwitchCase="'Java'">Java é uma linguagem que pertence a Oracle</li>
+    <li *ngSwitchCase="'Python'">Python é uma linguagem muito rápida.</li>
+    <li *ngSwitchDefault>Informe uma linguagem</li>
+</ul>

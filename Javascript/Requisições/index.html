@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição</title>
+
+    <script>
+        // GET
+        // fetch("http://localhost:3000/clientes")
+        // .then(requisicao => requisicao.json())
+        // .then(clientes => console.table(clientes));
+
+        // POST
+        // fetch("http://localhost:3000/clientes",
+        // {
+        //     method:"POST",
+        //     body: JSON.stringify({"nome": "Alice", "idade": 32}),
+        //     headers: {"Content-Type": "application/json"}
+        // })
+        // .then(requisicao => requisicao.json())
+        // .then(clientes => console.table(clientes));
+
+        // PUT inserir no final o id a ser alterado
+        // fetch("http://localhost:3000/clientes/3",
+        // {
+        //     method:"PUT",
+        //     body: JSON.stringify({"nome": "Rebeca", "idade": 19}),
+        //     headers: {"Content-Type": "application/json"}
+        // })
+        // .then(requisicao => requisicao.json())
+        // .then(clientes => console.table(clientes));
+
+        // DELETE inserir no final o id a ser deletado
+        // fetch("http://localhost:3000/clientes/1",
+        // {
+        //     method:"DELETE",
+        //     headers: {"Content-Type": "application/json"}
+        // })
+        // .then(requisicao => console.log(requisicao));
+
+        // IMPLEMENTAR O FETCH
+        fetch("http://localhost:3000/clientes/3",
+        {
+            method:"DELETE",
+            headers: {"Content-Type": "application/json"}
+        })
+        .then(requisicao => console.log(requisicao))
+        .catch(erro => console.log(`Erro apresentado: ${erro}`))
+        .finally(() => console.log("Requisisão finalizada"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

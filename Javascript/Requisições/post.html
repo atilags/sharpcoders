@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // POST
+    fetch('http://localhost:3000/clientes', 
+    {
+        method: 'POST',
+        body: JSON.stringify({'nome':'Ubervania', 'idade':25}),
+        headers: {'Content-Type':'application/json'}
+    })
+    .then(request => request.json())
+    .then(clientes => console.log(clientes));
+</script>
+
+<body>
+
+</body>
+
+</html>
