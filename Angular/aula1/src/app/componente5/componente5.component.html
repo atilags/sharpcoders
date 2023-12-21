@@ -1,1 +1,8 @@
-<p>componente5 works!</p>
+<h1>{{formulario.value | json}}</h1>
+<h1>E-mail: {{formulario.value.email}}</h1>
+
+<form [formGroup]="formulario" (submit)="enviar()">
+    <input type="email" formControlName="email" placeholder="E-mail">
+    <input type="senha" formControlName="senha" placeholder="Senha">
+    <input type="submit" value="Enviar">
+</form>

@@ -1,0 +1,73 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Música para todos - Spotify</title>
+  </head>
+
+  <body>
+    <!-- Código NavBar -->
+    <header id="navbar">
+      <nav class="navbar-container">
+        <img src="img/logo.png" alt="" class="logo" />
+        <ul class="navbar-items">
+          <li class="navbar-item">Premium</li>
+          <li class="navbar-item">Ajuda</li>
+          <li class="navbar-item">Baixar</li>
+          <li class="navbar-item">Inscrever-se</li>
+          <li class="navbar-item">Entrar</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="principal">
+      <div class="container">
+        <h2 id="titulo">Add User</h2>
+        <p id="msg"></p>
+        <form action="#" id="formulario">
+          <div class="inputs">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              placeholder="Informe seu nome"
+              id="name"
+            /><label for="email">E-mail:</label>
+            <input
+              type="email"
+              placeholder="Informe seu e-mail"
+              id="email"
+            />
+          </div>
+          <input type="submit" value="Enviar" class="btn" />
+        </form>
+      </div>
+      
+      <div class="itens">
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Script -->
+    <script
+      src="https://kit.fontawesome.com/039b21bf2e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="dom-selecionar.js"></script> -->
+    <!-- <script src="dom-manipular.js"></script> -->
+    <!-- <script src="eventos.js"></script> -->
+    <script src="formulario-validacao.js"></script>
+  </body>
+</html>

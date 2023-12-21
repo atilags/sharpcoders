@@ -1,0 +1,33 @@
+<p>{{ formulario.value | json }}</p>
+
+<!-- Verificar os inputs -->
+<!-- <p *ngIf="formulario.get('email')?.hasError('required')">
+  O e-mail precisa ser informado.
+</p>
+<p *ngIf="formulario.get('email')?.hasError('email')">
+  Informe um e-mail válido.
+</p> -->
+
+@if(formulario.get('email')?.hasError('required')){
+    <p>O email precisa ser informado.</p>
+    
+    } @if(formulario.get('email')?.hasError('email')) {
+    <p>Não é um email válido.</p>
+    }
+
+
+<form [formGroup]="formulario" (submit)="autenticar()">
+  <input
+    type="email"
+    formControlName="email"
+    placeholder="Informe seu e-mail"
+    class="form-control"
+  />
+  <input
+    type="password"
+    formControlName="senha"
+    placeholder="Informe sua senha"
+    class="form-control"
+  />
+  <input type="submit" placeholder="Entrar" class="btn btn-primary" [disabled]="formulario.invalid"/>
+</form>

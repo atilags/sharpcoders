@@ -1,0 +1,14 @@
+1º Criar componente de aluno
+ng g c componentes/alunos
+
+2º Criar serviço de alunos
+ng g s servicos/aluno
+
+3º Criar um modelo
+Dentro da pasta src>app criar uma pasta nova. 
+"new folder Modelos"
+Dentro criar os modelos de classe ou interface.
+
+4º Executar projeto
+ng s
+ng serve

@@ -1,0 +1,29 @@
+<h1>Pagina de postagens</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Código do usuário</th>
+            <th>Código</th>
+            <th>Título</th>
+            <th>Postagem</th>
+        </tr>
+    </thead>
+</table>
+
+<tbody>
+    @for (p of postagens; track $index) {
+        <tr>
+            <td>{{p.userId}}</td>
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.body}}</td>
+        </tr>
+    }
+    <!-- <tr *ngFor="let p of postagens">
+        <td>{{p.userId}}</td>
+        <td>{{p.id}}</td>
+        <td>{{p.title}}</td>
+        <td>{{p.body}}</td>
+    </tr> -->
+</tbody>

@@ -10,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class Componente3Component {
 
+  // Variavel media
+  media:number =8;
+
+  // Variavel linguagem
+  linguagem:string = 'css';
+
+  // Vetor de nomes
+  nomes:string[] = ['Luciana', 'Renato', 'Carla'];
 }
